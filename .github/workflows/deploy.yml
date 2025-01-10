@@ -1,6 +1,6 @@
 name: Déploiement vers Vercel
 
- Condition de déclenchement
+# Condition de déclenchement
 on:
   push:
     branches:
