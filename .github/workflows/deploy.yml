@@ -65,7 +65,7 @@ jobs:
 
 # Troisième job: Scan qualité par SonarCloud
   sonarcloud:
-    #scan
+    # Scan
     name: SonarCloud Scan
     runs-on: ubuntu-latest
 
