@@ -30,7 +30,7 @@ jobs:
       - name: Run tests
         run: npm test
 
-  # Deuxième job: déploiement
+  # Troisième job: déploiement
   deploy:
     needs: test # Exécute le job de déploiement seulement si le job "test" réussi
     runs-on: ubuntu-latest
@@ -63,9 +63,8 @@ jobs:
           npm install -g vercel
           vercel --prod --token $VERCEL_TOKEN --yes
 
-  # Troisième job: Scan qualité par SonarCloud
+  # Troisième job: Scan qualité
   sonarcloud:
-    # Scan SonarCloud
     name: SonarCloud Scan
     runs-on: ubuntu-latest
 
