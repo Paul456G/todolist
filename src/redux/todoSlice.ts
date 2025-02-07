@@ -9,9 +9,12 @@ import { TODO } from "../utils/types";
 
 const todoEntityAdapter = createEntityAdapter<TODO>();
 
-export const todoSlice = createSlice({
+const initialState: EntityState<TODO, number> =
+  todoEntityAdapter.getInitialState();
+
+const todoSlice = createSlice({
   name: "todos",
-  initialState: todoEntityAdapter.getInitialState({}),
+  initialState,
   reducers: {
     addTodo: todoEntityAdapter.addOne, // Ajoute un todo
     addTodos: todoEntityAdapter.addMany, // Ajoute plusieurs todo
@@ -24,6 +27,5 @@ export const todoSlice = createSlice({
 // Exporter les actions générées
 export const { addTodo, addTodos, updateTodo, removeTodo, setAllTodos } =
   todoSlice.actions;
-export const todoGlobalizedSelector = todoEntityAdapter.getSelectors();
 
 export default todoSlice.reducer;
