@@ -63,7 +63,7 @@ jobs:
           npm install -g vercel
           vercel --prod --token $VERCEL_TOKEN --yes
 
-# Troisième job: Scan qualité par SonarCloud
+  # Troisième job: Scan qualité par SonarCloud
   sonarcloud:
     # Scan SonarCloud
     name: SonarCloud Scan
