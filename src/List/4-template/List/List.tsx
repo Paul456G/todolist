@@ -10,7 +10,6 @@ import {
   ListItemText,
 } from "@mui/material";
 import { todoGlobalizedSelector } from "../../../redux/todoSlice";
-import { useState } from "react";
 
 //********** Component **********//
 const ListComponent = () => {
